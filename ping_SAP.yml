@@ -1,0 +1,4 @@
+- hosts: 10.8.64.91 
+  tasks:
+  - name: Check connectivity
+    ping:

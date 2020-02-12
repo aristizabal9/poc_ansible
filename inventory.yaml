@@ -1,0 +1,7 @@
+all:
+  hosts:
+    127.0.0.1:2222
+  vars:
+    ansible_user: vagrant
+    nginx_webserver_port: 80
+    nginx_test_message: "Hello world!"

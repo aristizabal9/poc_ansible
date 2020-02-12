@@ -1,0 +1,9 @@
+ansible-playbook -i inventory.yaml playbook.yaml
+
+# Role encargado de validar e instalar Java
+ansible-galaxy install geerlingguy.java
+
+# Playbook encargado de usar el rol de Java y de keytool
+ansible-playbook -i inventory.txt playbook-java.yaml
+ansible all -i inventory.txt -m shell -a 'java -version'
+ansible all -i inventory.txt -m shell -a 'ls -lR /tmp/keystores'
